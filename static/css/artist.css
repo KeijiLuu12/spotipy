@@ -1,0 +1,133 @@
+body {
+    margin: auto;
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+}
+
+.navigation-options {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    background-color: rgb(18, 18, 18);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.navigation-options li {
+
+    float: left;
+
+}
+
+.navigation-options li a {
+
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+
+}
+
+#title {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto'
+}
+
+.navigation-options li a:hover {
+    
+    background-color: gray;
+    transition: 0.4s;
+
+}
+
+.navigation-options li a:active {
+
+    background-color: rgb(31, 31, 31);
+}
+
+#top-artist-time {
+
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto';
+    top: 10%;
+
+}
+
+#top-artist-num {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto';
+    top: 10%;
+}
+
+.top-artists {
+    list-style-type: none;
+    list-style-position: inside;
+    color:white;
+    padding-left: 0;
+}
+
+.top-artists li {
+    text-align: center;
+    font-family: 'Roboto';
+    color: white;
+    
+}
+
+.top-artist-image {
+
+    padding: 10px;
+}
+
+.top-artist-list {
+
+    background-color: rgb(66, 66, 66);
+    border-radius: 32px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+
+}
+
+#artist-header {
+
+    font-family: 'Roboto';
+}
+
+#spotify-button {
+
+    transition: 0.5s;
+    float: bottom;
+    background-color: #146542;
+    padding: 3px;
+    height: 50px;
+    width: 150px;
+    font-family: 'Roboto';
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 16px;
+    color: white;
+}
+
+#spotify-button:hover {
+    background-color: #1db954;
+    
+}

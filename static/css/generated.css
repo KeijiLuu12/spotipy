@@ -1,0 +1,73 @@
+body {
+    margin: auto;
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto';
+    animation-name: reveal;
+    animation-duration: 4s;
+}
+
+@keyframes reveal {
+    0% { color: rgb(33, 33, 33); }
+    100% {color: white; }
+}
+
+.navigation-options {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    background-color: rgb(18, 18, 18);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+}
+
+.navigation-options li {
+
+    float: left;
+
+}
+
+.navigation-options li a {
+
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto';
+
+}
+
+#title {
+    display: block;
+    color: white;
+    padding: 12px 16px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto'
+}
+
+.navigation-options li a:hover {
+    
+    background-color: gray;
+    transition: 0.4s;
+
+}
+
+.navigation-options li a:active {
+
+    background-color: rgb(31, 31, 31);
+}

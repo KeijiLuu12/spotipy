@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Playlist Generator</title>
+</head>
+
+<body>
+
+    <ul class="navigation-options">
+        <li id="title"><b>Spotify Playlist Generator</b></li>
+        <li id="home"><a href="http://127.0.0.1:5000/home">Home</a></li>
+        <li id="artist-stats"><a href="http://127.0.0.1:5000/artist-stats">Artist Stats</a></li>
+        <li id="song-stats"><a href="http://127.0.0.1:5000/song-stats">Song Stats</a></li>
+    </ul>
+
+    <div class="container-button">
+        <a href="http://127.0.0.1:5000/artists">
+            <button name="button" id="spotify-button"><b>Log in</b></button>
+        </a> 
+    </div>
+
+    <div class="explanation-container">
+        <h1 id="explanation-header">How it works</h1>
+        <p id="explanation-paragraph">
+            For this playlist generator, it takes your top 5 artists from Spotify that you have listened to for the selected timeframe and generates a playlist for you, hopefully to find some new songs/artists that you haven't heard before.
+        </p>
+    </div>
+
+    <br>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+<head>
+    <script src = "{{url_for('static', filename='js/script.js')}}" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artist.css') }}">
+    <title>Playlist Generator</title>
+</head>
+
+<body>
+
+    <ul class="navigation-options">
+        <li id="title"><b>Spotify Playlist Generator</b></li>
+        <li id="home"><a href="http://127.0.0.1:5000/home">Home</a></li>
+        <li id="artist-stats"><a href="http://127.0.0.1:5000/artist-stats">Artist Stats</a></li>
+        <li id="song-stats"><a href="http://127.0.0.1:5000/song-stats">Song Stats</a></li>
+    </ul>
+
+    <select id="top-artist-time" name="time-period" onchange="changeTimeframe()" form="generate-playlist-button"> <!-- Add form to these elements as the values for these select options must be sent to backend-->
+        <option value="short_term">4 Weeks</option>
+        <option value="medium_term">6 Months</option>
+        <option value="long_term">All Time</option>
+    </select>
+
+    <select id="top-artist-num" name="num-songs" form="generate-playlist-button">
+        <option value = "10">10 songs</option>
+        <option value = "25">25 songs</option>
+        <option value = "50">50 songs</option>
+    </select> 
+
+    <div class="top-artists-container">
+        <ul class = "top-artists">
+            <h2 id="artist-header">Your Top 5 artists of the last 4 weeks are:</h2>
+            <div class="top-artist-list">
+            {% for artist in artists %}
+                <img class="top-artist-image" id="top-artist-image{{loop.index}}" src="{{artist[2]}}" height="150" width="150">
+                <li class="top-artist-name" id="top-artist-name{{loop.index}}"><b>{{artist[1]}}</b></li>
+            {% endfor %}
+            </div>
+        </ul>
+    </div>
+    
+    <form id="generate-playlist-button" method="post">
+        <button type="submit" name="button" id="spotify-button"><b>Generate</b></button>
+    </form>
+
+    <br>
+
+</body>
+
+</html>
