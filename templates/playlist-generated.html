@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/generated.css') }}">
+    <title>Playlist Generator</title>
+</head>
+
+<body>
+
+    <ul class="navigation-options">
+        <li id="title"><b>Spotify Playlist Generator</b></li>
+        <li id="home"><a href="http://127.0.0.1:5000/home">Home</a></li>
+        <li id="artist-stats"><a href="http://127.0.0.1:5000/artist-stats">Artist Stats</a></li>
+        <li id="song-stats"><a href="http://127.0.0.1:5000/song-stats">Song Stats</a></li>
+    </ul>
+
+    <img id="loading-vinyl" src="/static/images/loading_vinyl.png" width="300" height="300">
+
+    <p>Generated Successfully!</p>
+    
+</body>
+
+</html>

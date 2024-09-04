@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+<head>
+    <script src = "{{url_for('static', filename='js/song-stats.js')}}" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/song-stats.css') }}">
+    <title>Playlist Generator</title>
+</head>
+
+<body>
+
+    <ul class="navigation-options">
+        <li id="title"><b>Spotify Playlist Generator</b></li>
+        <li id="home"><a href="http://127.0.0.1:5000/home">Home</a></li>
+        <li id="artist-stats"><a href="http://127.0.0.1:5000/artist-stats">Artist Stats</a></li>
+        <li id="song-stats"><a href="http://127.0.0.1:5000/song-stats">Song Stats</a></li>
+    </ul>
+
+    <select id="top-songs-time" name="time-period" onchange="changeTimeframe()"> <!-- Add form to these elements as the values for these select options must be sent to backend-->
+        <option value="short_term">4 Weeks</option>
+        <option value="medium_term">6 Months</option>
+        <option value="long_term">All Time</option>
+    </select>
+
+    <div class="song-container">
+        <ol class="song-list">
+            {% for song in songs %}
+                <li>
+                    <div>
+                        <img class="top-song-image" id="top-song-image{{loop.index}}" src="{{song[1]}}" height="150" width="150">
+                        <p class="top-song-name" id="top-song-name{{loop.index}}"><b>{{loop.index}}. {{song[0]}}</b> | {{song[2]}}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ol>
+            
+    </div>
+
+</body>
